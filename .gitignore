@@ -1,0 +1,13 @@
+.DS_Store
+.vscode
+.nyc_output
+/build
+/node_modules
+/frontend/build
+/frontend/cache
+/frontend/node_modules
+/frontend/app/node_modules
+/coverage
+dxsync.sublime-project
+dxsync.sublime-workspace
+/*.tgz

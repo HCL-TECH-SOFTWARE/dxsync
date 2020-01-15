@@ -1,0 +1,73 @@
+{
+  "name": "dxsync",
+  "version": "1.0.3",
+  "description": "HCL Digital Experience File Sync - This utility synchronizes theme resources with an HCL Digital Experience instance to a local directory.",
+  "homepage": "https://github.com/hcl-dx/dxsync",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hcl-dx/dxsync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hcl-dx/dxsync/issues"
+  },
+  "author": "HCL Technologies Ltd.",
+  "contributors": [
+    {
+      "name": "Thomas Hurek",
+      "email": "thomas.hurek@hcl.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bin": {
+    "dxsync": "bin/dxsync"
+  },
+  "dependencies": {
+    "aes256": "1.0.4",
+    "colors": "1.4.0",
+    "fs-extra": "8.1.0",
+    "node-notifier": "5.4.3",
+    "prompt": "1.0.0",
+    "q": "1.5.1",
+    "request": "2.88.0",
+    "throat": "5.0.0",
+    "tracer": "1.0.1",
+    "xml2js": "0.4.22",
+    "pathwatcher": "./precompiled_modules/pathwatcher-8.1.0.tgz"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/register": "latest",
+    "babel-plugin-rewire": "latest",
+    "download-npm-package": "latest",
+    "execa": "latest",
+    "eslint": "latest",
+    "eslint-plugin-node": "latest",
+    "grunt": "latest",
+    "grunt-contrib-compress": "latest",
+    "jshint": "latest",
+    "jshint-full-path": "latest",
+    "mocha": "latest",
+    "mock-stdin": "latest",
+    "nyc": "latest",
+    "should": "latest",
+    "source-map-support": "latest",
+    "webdav-server": "latest"
+  },
+  "scripts": {
+    "lint": "jshint . --reporter=./node_modules/jshint-full-path/index.js",
+    "checkStyle": "eslint .",
+    "pretest": "npm run checkStyle",
+    "test": "nyc --reporter=html --reporter=text --check-coverage=true mocha -- -r source-map-support/register -r @babel/register -r should --bail --recursive -R spec"
+  },
+  "nyc": {
+    "branches": 80,
+    "lines": 80,
+    "functions": 80,
+    "statements": 80
+  },
+  "engines": {
+    "node": "^12",
+    "npm": "^6"
+  },
+  "engine-strict": true
+}

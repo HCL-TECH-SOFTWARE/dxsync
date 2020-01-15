@@ -1,0 +1,9 @@
+{
+	"plugins": [
+		"babel-plugin-rewire"
+	],
+	"only": [
+		"./lib/*.js",
+	],
+	"sourceMaps": "both"
+}

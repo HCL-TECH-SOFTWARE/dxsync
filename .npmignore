@@ -1,0 +1,8 @@
+/build
+/coverage
+/release
+/test
+/scripts
+/.vscode
+/.nyc_output
+/*.tgz
