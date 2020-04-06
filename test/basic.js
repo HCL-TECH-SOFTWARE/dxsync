@@ -44,7 +44,7 @@ describe( "sync-basics", function() {
 			sync.runCLI( "." );
 			syncUtils.getLogger().error( "Test Error", new Error() );
 			hook.captured().should.containEql( "REDIRECTED" );
-			hook.captured().should.containEql( "HCL Digital Experience File Sync"" );
+			hook.captured().should.containEql( "HCL Digital Experience File Sync" );
 			hook.captured().should.containEql( "<info> main.js:" );
 			hook.captured().should.containEql( "Test Error" );
 			hook.captured().should.containEql( "basic.js" );
@@ -65,7 +65,7 @@ describe( "sync-basics", function() {
 			process.argv = [ "dir", "shell", "" ];
 			sync.runCLI( "." );
 			hook.captured().should.containEql( "REDIRECTED" );
-			hook.captured().should.containEql( "HCL Digital Experience File Sync"" );
+			hook.captured().should.containEql( "HCL Digital Experience File Sync" );
 			syncUtils.isDebug().should.be.false();
 			syncUtils.isDebugFinest().should.be.false();
 			fs.existsSync( syncPoint + "/dxsync.log" ).should.be.false();
@@ -127,7 +127,7 @@ describe( "sync-basics", function() {
 		it( "Should print help due to unknown option", function() {
 			process.argv = [ "dir", "shell", "invalid" ];
 			sync.runCLI( "." );
-			hook.captured().should.containEql( "HCL Digital Experience File Sync"" );
+			hook.captured().should.containEql( "HCL Digital Experience File Sync" );
 			hook.captured().should.containEql( "dxsync.sh <options> <command>" );
 			hook.captured().should.containEql( "The log file will be written to" );
 		} )
