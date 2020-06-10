@@ -63,4 +63,6 @@ If you receive a message similar to the above, you have two choices:
 
    `./install.sh --from-source` or `install.cmd --from-source` on Windows
 
+## Support
 
+HCL Support will make every reasonable effort to assist in problem resolution of any issues found in this software
